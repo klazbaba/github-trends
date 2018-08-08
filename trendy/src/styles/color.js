@@ -1,3 +1,3 @@
-const color = {
+export const color = {
     grey: 'grey'
 }

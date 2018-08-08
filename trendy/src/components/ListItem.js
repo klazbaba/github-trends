@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
-import {color} from ../styles/color
+import {color} from '../styles/color'
 
 const ListItem = (props) => {
     return (
@@ -10,9 +10,11 @@ const ListItem = (props) => {
     )
 }
 
+export default ListItem
+
 const styles = StyleSheet.create({
     wrapper: {
-        borderBottomWidth: 1
+        borderBottomWidth: 1,
         borderBottomColor: color.grey
     }
 })
