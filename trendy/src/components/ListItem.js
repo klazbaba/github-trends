@@ -15,6 +15,7 @@ export default ListItem
 const styles = StyleSheet.create({
     wrapper: {
         borderBottomWidth: 1,
-        borderBottomColor: color.grey
+        borderBottomColor: color.grey,
+        paddingVertical: 8
     }
 })

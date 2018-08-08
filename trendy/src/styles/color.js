@@ -1,3 +1,4 @@
 export const color = {
-    grey: 'grey'
+    grey: 'grey',
+    blue: 'blue'
 }
