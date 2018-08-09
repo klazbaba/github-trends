@@ -4,7 +4,10 @@ import {color} from '../styles/color'
 
 const ListItem = (props) => {
     return (
-        <TouchableOpacity style={styles.wrapper}>
+        <TouchableOpacity
+            style={styles.wrapper}
+            onPress={props.onPressItem}
+        >
             <View style={styles.thumbnail}>
                 <Image
                     source={{uri: props.image}}

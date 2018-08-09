@@ -4,6 +4,7 @@ import ListItem from '../components/ListItem'
 
 export default class HomeScreen extends Component {
     renderList = ({item}) => {
+        const {navigation} = this.props
         return (
             <ListItem
                 user={item.user}
@@ -12,6 +13,7 @@ export default class HomeScreen extends Component {
                 forks={item.forks}
                 description={item.description}
                 image={item.image}
+                onPressItem={() => navigation.navigate('Details')}
             />
         )
     }
