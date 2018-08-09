@@ -14,7 +14,17 @@ export default class HomeScreen extends Component {
                 description={item.description}
                 image={item.image}
                 onPressItem={() =>
-                    navigation.navigate('Details', {image: item.image})
+                    navigation.navigate(
+                        'Details',
+                        {
+                            image: item.image,
+                            user: item.user,
+                            project: item.project,
+                            stars: item.stars,
+                            forks: item.forks,
+                            description: item.description
+                        }
+                    )
                 }
             />
         )

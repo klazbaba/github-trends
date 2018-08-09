@@ -5,15 +5,25 @@ import {color} from '../styles/color'
 const DetailItem = (props) => {
     return (
         <View style={styles.wrapper}>
-
+            <Text style={styles.label}>{props.label + ':'}</Text>
+            <Text style={styles.value}>{props.value}</Text>
         </View>
     )
 }
 
+export default DetailItem
+
 const styles = StyleSheet.create({
     wrapper: {
         flexDirection: 'row',
-        borderBottomColor: color.grey,
-        borderBottomWidth: 1
+        marginTop: 16
+    },
+    value: {
+        marginLeft: 16,
+        flex: 1,
+        flexWrap: 'wrap'
+    },
+    label: {
+        width: 65
     }
 })
