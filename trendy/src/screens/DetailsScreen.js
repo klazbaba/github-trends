@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {View, StyleSheet, Image, ScrollView} from 'react-native'
 import {color} from '../styles/color'
 import DetailItem from '../components/DetailItem'
-import { Item } from 'native-base';
 
 export default class DetailsScreen extends Component {
     static navigationOptions = {
