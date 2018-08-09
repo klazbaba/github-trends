@@ -5,12 +5,22 @@ import ListItem from '../components/ListItem'
 export default class HomeScreen extends Component {
     renderList = ({item}) => {
         return (
-            <ListItem />
+            <ListItem
+                user={item.user}
+                project={item.project}
+                stars={item.stars}
+                forks={item.forks}
+                description={item.description}
+                image={item.image}
+            />
         )
     }
+
     render() {
         const DATA = [
             {
+                image:
+                    'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/0ba197eed01b550b7f6d4df10153223e',
                 user: 'jesseduffield',
                 project: 'lazygit',
                 description: 'simple terminal UI for git commands',
@@ -18,6 +28,8 @@ export default class HomeScreen extends Component {
                 forks: '127'
             },
             {
+                image:
+                    'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/0ba197eed01b550b7f6d4df10153223e',
                 user: 'google',
                 project: 'filament',
                 description: 'Filament is a physically based rendering engine for Android, Windows, Linux and macOS',
@@ -25,6 +37,8 @@ export default class HomeScreen extends Component {
                 forks: '126'
             },
             {
+                image:
+                    'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/0ba197eed01b550b7f6d4df10153223e',
                 user: 'Avik-Jain',
                 project: '100-Days-Of-ML-Code',
                 description: '100 Days of ML Coding',
@@ -32,6 +46,8 @@ export default class HomeScreen extends Component {
                 forks: '685'
             },
             {
+                image:
+                    'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/0ba197eed01b550b7f6d4df10153223e',
                 user: 'kitao',
                 project: 'pyxel',
                 description: 'A retro game development environment in Python',

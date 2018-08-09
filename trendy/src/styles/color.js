@@ -1,4 +1,6 @@
 export const color = {
     grey: 'grey',
-    blue: 'blue'
+    brown: 'brown',
+    white: 'white',
+    lightGrey: 'lightgrey'
 }

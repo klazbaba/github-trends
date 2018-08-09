@@ -1,4 +1,3 @@
-import React from 'react'
 import {createStackNavigator} from 'react-navigation'
 import HomeScreen from '../screens/HomeScreen'
 import {color} from '../styles/color'
@@ -9,9 +8,10 @@ const AppStack = createStackNavigator(
     },
     {
         navigationOptions: {
-            title: 'Home screen',
+            title: 'Trending repos',
+            headerTintColor: color.white,
             headerStyle: {
-                backgroundColor: color.blue
+                backgroundColor: color.brown
             }
         }
     }
