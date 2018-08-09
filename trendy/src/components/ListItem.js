@@ -1,6 +1,7 @@
 import React from 'react'
 import {TouchableOpacity, Text, StyleSheet, View, Image} from 'react-native'
 import {color} from '../styles/color'
+import { Icon } from 'native-base';
 
 const ListItem = (props) => {
     return (
@@ -21,8 +22,14 @@ const ListItem = (props) => {
                 <Text style={styles.bottomMiddleText}>{props.description}</Text>
             </View>
             <View style={styles.right}>
-                <Text>{props.stars}</Text>
-                <Text>{props.forks}</Text>
+                <View style={styles.innerRightWrapper}>
+                    <Text>{'\u2605 '}</Text>
+                    <Text>{props.stars}</Text>
+                </View>
+                <View style={styles.innerRightWrapper}>
+                    <Icon name="code-fork" type="FontAwesome" />
+                    <Text>{' ' + props.forks}</Text>
+                </View>
             </View>
         </TouchableOpacity>
     )
@@ -63,5 +70,9 @@ const styles = StyleSheet.create({
     image: {
         height: 50,
         width: 50
+    },
+    innerRightWrapper: {
+        flexDirection: 'row',
+        alignItems: 'baseline'
     }
 })

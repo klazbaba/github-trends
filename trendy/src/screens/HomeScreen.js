@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, StyleSheet, FlatList} from 'react-native'
+import {ScrollView, StyleSheet, FlatList} from 'react-native'
 import ListItem from '../components/ListItem'
 
 export default class HomeScreen extends Component {
@@ -13,7 +13,9 @@ export default class HomeScreen extends Component {
                 forks={item.forks}
                 description={item.description}
                 image={item.image}
-                onPressItem={() => navigation.navigate('Details')}
+                onPressItem={() =>
+                    navigation.navigate('Details', {image: item.image})
+                }
             />
         )
     }
@@ -60,13 +62,13 @@ export default class HomeScreen extends Component {
         ]
 
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <FlatList
                     data={DATA}
                     renderItem={this.renderList}
-                    keyExtractor={(item) => item.user}
+                    keyExtractor={item => item.user}
                 />
-            </View>
+            </ScrollView>
         )
     }
 }
