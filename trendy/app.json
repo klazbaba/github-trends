@@ -3,9 +3,9 @@
     "sdkVersion": "27.0.0",
     "name": "Trendy Repos",
     "version": "1.0.0",
-    "slug": "exp.host/@klazbaba/trendy-repos",
     "platforms": ["android"],
     "githubUrl": "https://github.com/klazbaba/github-trends",
-    "android": {"platform": "com.klaz.trendy-repos"}
+    "android": { "package": "com.klazbaba.trendy" },
+    "slug": "trendy-repos"
   }
 }
